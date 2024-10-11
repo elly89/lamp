@@ -108,6 +108,27 @@ CREATE TABLE `Departments` (
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci |
 ```
 
+## Insert data into tables
+
+ - Data in Department table
+   ```
+     INSERT INTO Departments (id, name, location) 
+                   VALUES (1, 'Human Resources', 'New York'),
+                          (2, 'Engineering', 'San Francisco'),
+                          (3, 'Marketing', 'Chicago');
+
+   ```
+
+- Data in Employees table
+
+```
+INSERT INTO Employees (id, name, position, salary) 
+VALUES (1, 'John Doe', 'Software Engineer', 75000.00),
+       (2, 'Jane Smith', 'Project Manager', 85000.00),
+       (3, 'Alice Johnson', 'HR Specialist', 60000.00);
+
+```
+
 
 
 
