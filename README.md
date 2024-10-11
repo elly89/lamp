@@ -54,6 +54,63 @@ echo "Connected successfully";
 ```
 3. Save the file and access it in your browser: Navigate to http://18.224.171.212/tphs.php/
 
+# Database Setup and Operations
+
+Database exercise  name is company_db
+
+## Tables descriptions
+
+###  Table 1 (Employees)
+
+ 1. This table store employees informations
+
++----------+--------------+------+-----+---------+----------------+
+| Field    | Type         | Null | Key | Default | Extra          |
++----------+--------------+------+-----+---------+----------------+
+| id       | int          | NO   | PRI | NULL    | auto_increment |
+| name     | varchar(100) | YES  |     | NULL    |                |
+| location | varchar(100) | YES  |     | NULL    |                |
++----------+--------------+------+-----+---------+----------------+
+
+2. Create table statement for Table 1
+
+```
+CREATE TABLE `Employees` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) DEFAULT NULL,
+  `position` varchar(100) DEFAULT NULL,
+  `salary` decimal(10,2) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci |
+```
+
+### Table 2: Department
+
+ 1. This table store department informations
+
+ +----------+---------------+------+-----+---------+----------------+
+| Field    | Type          | Null | Key | Default | Extra          |
++----------+---------------+------+-----+---------+----------------+
+| id       | int           | NO   | PRI | NULL    | auto_increment |
+| name     | varchar(100)  | YES  |     | NULL    |                |
+| position | varchar(100)  | YES  |     | NULL    |                |
+| salary   | decimal(10,2) | YES  |     | NULL    |                |
++----------+---------------+------+-----+---------+----------------+
+
+2. Create table statemnt for Table 2
+
+```
+CREATE TABLE `Departments` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) DEFAULT NULL,
+  `location` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci |
+```
+
+
+
+
 
 
 
