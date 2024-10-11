@@ -129,7 +129,7 @@ VALUES (1, 'John Doe', 'Software Engineer', 75000.00),
 
 ```
 
-# Set variables for the backup scripts
+## Set variables for the backup scripts
 ```
 DB_NAME="company_db"                                
 BACKUP_DIR="/var/backups/mysql"                
@@ -137,19 +137,21 @@ DATE=$(date +"%Y%m%d_%H%M%S")
 BACKUP_FILE="${BACKUP_DIR}/${DB_NAME}_${DATE}.sql"  
 ```
 
-# Create backup directory
+## Create backup directory and Mysql command to perfom the backup and Compress the backup
+```
 mkdir -p $BACKUP_DIR
-
-# Mysql command to perfom Perform the backup and Compress the backup
 mysqldump -u root $DB_NAME > $BACKUP_FILE
+```
 
+##  Zip backup file and remove old backups, keeping only the last 7
+```
 gzip $BACKUP_FILE
-
-# Remove old backups, keeping only the last 7
 cd $BACKUP_DIR
 ls -t *.sql.gz | tail -n +8 | xargs -r rm
+```
 
-# Notify user of backup completion
+## Notify user of backup completion
+
 echo "Backup completed: ${BACKUP_FILE}.gz"
 
 
