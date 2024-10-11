@@ -130,11 +130,12 @@ VALUES (1, 'John Doe', 'Software Engineer', 75000.00),
 ```
 
 # Set variables for the backup scripts
-
-DB_NAME="company_db"                                # Name of the database to backup
-BACKUP_DIR="/var/backups/mysql"                     # Directory to store backups
-DATE=$(date +"%Y%m%d_%H%M%S")                       # Date format for backup file naming
-BACKUP_FILE="${BACKUP_DIR}/${DB_NAME}_${DATE}.sql"  # Full path for the backup file
+```
+DB_NAME="company_db"                                
+BACKUP_DIR="/var/backups/mysql"                
+DATE=$(date +"%Y%m%d_%H%M%S")                      
+BACKUP_FILE="${BACKUP_DIR}/${DB_NAME}_${DATE}.sql"  
+```
 
 # Create backup directory
 mkdir -p $BACKUP_DIR
