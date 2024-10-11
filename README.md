@@ -31,7 +31,6 @@ sudo apt update && sudo apt upgrade -y
  - <?php
     phpinfo();
   ?>
-3. Test by accessing the file in your browser: Navigate to http://your_server_ip/info.php
 
 ## Test Database Connectivity
 1. sudo nano /var/www/html/tphs.php
