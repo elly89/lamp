@@ -37,7 +37,7 @@ sudo apt update && sudo apt upgrade -y
 1. sudo nano /var/www/html/tphs.php
 2. Add the following code to test the MySQL connection
 
- `<?php
+ ```<?php
 $servername = "localhost";
 $username = "mmari";
 $password = "123456";
@@ -51,7 +51,7 @@ if ($conn->connect_error) {
 }
 echo "Connected successfully";
 ?>
-`
+```
 3. Save the file and access it in your browser: Navigate to http://18.224.171.212/tphs.php/
 
 
