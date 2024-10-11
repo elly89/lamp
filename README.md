@@ -28,7 +28,8 @@ sudo apt update && sudo apt upgrade -y
 ```
 2. Test PHP Integration with Apache
  - sudo vi /var/www/html/info.php
-  ```<?php
+  ```
+  <?php
     phpinfo();
   ?>
   ```
