@@ -28,10 +28,10 @@ sudo apt update && sudo apt upgrade -y
 ```
 2. Test PHP Integration with Apache
  - sudo vi /var/www/html/info.php
- - <?php
+  ```<?php
     phpinfo();
   ?>
-
+  ```
 ## Test Database Connectivity
 1. sudo nano /var/www/html/tphs.php
 2. Add the following code to test the MySQL connection
