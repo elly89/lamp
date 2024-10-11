@@ -60,7 +60,7 @@ Database exercise  name is company_db
 
 ## Tables descriptions
 
-###  Table 1 (Employees)
+###  Table 1 Employees
 
  1. This table store employees informations
 
